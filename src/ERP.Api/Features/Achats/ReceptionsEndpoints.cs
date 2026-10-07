@@ -67,7 +67,7 @@ public static class ReceptionsEndpoints
                     ReferenceId = reception.Id
                 });
             }
-
+            
             // Met a jour le statut de la commande : recue en totalite ou partiellement
             var totalCommande = commande.Lignes.Sum(l => l.Quantite);
             var totalDejaRecu = await db.LignesReception
